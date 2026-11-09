@@ -1,1 +1,0 @@
-export const ID_RESUME = '1uRMpGIwRjsw_UbPeF1cBXwNdVM95Nt2B'
