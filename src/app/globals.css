@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+/* Theme is driven by data-theme on <html>, set before first paint (see layout.tsx). */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/*
+ * Design tokens. Brand palette kept from the original site (navy, cream,
+ * yellow, green, red), recalibrated so every text pair meets WCAG AA:
+ *   dark:  fg 15.4:1 · muted 8.4:1 · accent 11.8:1 · green 10.6:1
+ *   light: fg 19.2:1 · muted 8.0:1 · accent 6.8:1  · green 6.0:1
+ * Input borders ≥ 3:1 (WCAG 1.4.11).
+ */
+:root,
+[data-theme="light"] {
+  --bg: #f6f6f6;
+  --surface: #ffffff;
+  --fg: #000018;
+  --muted: #4a4a5e;
+  --border: #dcdde3;
+  --border-strong: #767887;
+  --accent: #b00000;
+  --on-accent: #ffffff;
+  --accent-2: #1f6b43;
+  --shadow: #000018;
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --bg: #000018;
+  --surface: #0b0c26;
+  --fg: #e2dfc7;
+  --muted: #a8a690;
+  --border: #26273b;
+  --border-strong: #7a7c9e;
+  --accent: #f9b82c;
+  --on-accent: #000018;
+  --accent-2: #4fd08a;
+  --shadow: #4fd08a;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-accent: var(--accent);
+  --color-on-accent: var(--on-accent);
+  --color-accent-2: var(--accent-2);
+  --font-sans: var(--font-sans-face), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono-face), ui-monospace, monospace;
+}
+
+@layer base {
+  html {
+    scroll-padding-top: 5rem; /* keeps anchored headings clear of the sticky header */
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Lock page scroll while the mobile menu dialog is open. */
+  html:has(dialog[open]) {
+    overflow: hidden;
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: var(--on-accent);
+  }
+
+  /* One consistent, always-visible keyboard focus indicator. */
+  :focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
