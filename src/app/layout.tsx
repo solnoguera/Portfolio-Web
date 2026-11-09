@@ -9,7 +9,7 @@ const mono = JetBrains_Mono({ variable: "--font-mono-face", subsets: ["latin"], 
 
 const title = `${profile.name} · ${profile.role}`;
 const description =
-  "Senior full stack engineer (Node.js, React, TypeScript) with 6+ years building secure payment, government and blockchain systems. Open to remote roles in US/EU time zones.";
+  "Senior full stack engineer (Node.js, React, TypeScript) with 6+ years building secure payment, government and blockchain systems and integrating LLMs into production features. Open to remote roles in US/EU time zones.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(profile.siteUrl),
@@ -17,7 +17,18 @@ export const metadata: Metadata = {
   description,
   applicationName: `${profile.name} Portfolio`,
   authors: [{ name: profile.name, url: profile.siteUrl }],
-  keywords: ["Senior Full Stack Engineer", "Node.js", "React", "TypeScript", "NestJS", "Payments", "Stripe", "Remote"],
+  keywords: [
+    "Senior Full Stack Engineer",
+    "Node.js",
+    "React",
+    "TypeScript",
+    "NestJS",
+    "Payments",
+    "Stripe",
+    "LLM",
+    "OpenAI API",
+    "Remote",
+  ],
   alternates: { canonical: "/" },
   openGraph: {
     type: "profile",

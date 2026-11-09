@@ -9,7 +9,7 @@ export function Impact() {
         </h2>
         <dl className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {metrics.map((metric) => (
-            <div key={metric.value} className="flex flex-col-reverse gap-2 border-l-2 border-accent pl-4">
+            <div key={metric.value} className="flex flex-col-reverse justify-end gap-2 border-l-2 border-accent pl-4">
               <dt className="text-sm leading-snug text-muted">{metric.label}</dt>
               <dd className="font-mono text-lg font-bold tracking-tight whitespace-nowrap">{metric.value}</dd>
             </div>

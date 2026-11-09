@@ -23,5 +23,16 @@ export const skills: SkillGroup[] = [
     items: ["AWS (EC2, S3, Lambda, ECS, Secrets Manager)", "Docker", "GitHub Actions", "CI/CD"],
   },
   { category: "Blockchain", items: ["EVM", "ERC-20 / ERC-721", "Ethers.js", "Web3.js", "MetaMask"] },
-  { category: "AI", items: ["OpenAI API", "Claude Code", "Cursor", "Codex"] },
+  {
+    category: "AI & LLMs",
+    items: [
+      "OpenAI API",
+      "LLM integration",
+      "Conversational AI",
+      "Document processing",
+      "Claude Code",
+      "Cursor",
+      "Codex",
+    ],
+  },
 ];

@@ -22,10 +22,11 @@ export const experience: Experience[] = [
     location: "Remote",
     highlights: [
       "Built secure React and NestJS applications on PostgreSQL under strict regulatory and compliance standards, owning schemas, migrations and queries with Sequelize.",
+      "Implemented the backend OpenAI API integration for an AI-powered contract analysis feature, retrieving and processing documents from AWS S3 so users could query contract content conversationally.",
       "Moved .docx report exports to a Kafka background job with WebSocket notifications and retries, fixing request timeouts.",
       "Took the screens I worked on from 20 accessibility issues to 0 (axe DevTools) and designed new components for the internal Material UI library.",
     ],
-    stack: ["React", "NestJS", "PostgreSQL", "Sequelize", "Kafka", "WebSockets", "OpenAI API"],
+    stack: ["React", "NestJS", "PostgreSQL", "Sequelize", "OpenAI API", "AWS S3", "Kafka", "WebSockets"],
   },
   {
     company: "Codea IT",

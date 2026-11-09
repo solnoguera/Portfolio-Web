@@ -13,7 +13,7 @@ export function Experience() {
         id="experience-title"
         index="01"
         title="Experience"
-        description="Six years across payments, government compliance and blockchain, where mistakes cost real money."
+        description="Six years across payments, government compliance, AI features and blockchain, where mistakes cost real money."
       />
 
       <ol className="relative space-y-12 border-l-2 border-border pl-6 sm:pl-10">

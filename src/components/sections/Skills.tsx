@@ -9,7 +9,7 @@ export function Skills() {
         id="skills-title"
         index="03"
         title="Skills"
-        description="Core stack: Node.js, React and TypeScript."
+        description="Core stack: Node.js, React, TypeScript and NestJS."
       />
       <dl className="grid gap-x-10 gap-y-8 sm:grid-cols-2">
         {skills.map((group) => (

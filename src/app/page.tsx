@@ -19,7 +19,16 @@ const personJsonLd = {
   email: `mailto:${profile.email}`,
   image: `${profile.siteUrl}/images/profile.webp`,
   address: { "@type": "PostalAddress", addressLocality: "Buenos Aires", addressCountry: "AR" },
-  knowsAbout: ["Node.js", "React", "TypeScript", "NestJS", "PostgreSQL", "Payments", "Accessibility"],
+  knowsAbout: [
+    "Node.js",
+    "React",
+    "TypeScript",
+    "NestJS",
+    "PostgreSQL",
+    "Payments",
+    "LLM integration",
+    "Accessibility",
+  ],
   sameAs: profile.socials.filter((s) => s.icon !== "mail").map((s) => s.href),
 };
 

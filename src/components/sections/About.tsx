@@ -16,7 +16,9 @@ export function About() {
             <p>
               Most of my work has lived where correctness matters more than speed: payment flows that must confirm
               exactly once, compliance-bound software for public agencies and on-chain transfers with no undo. That
-              taught me to design for failure first: idempotency, retries, reconciliation and good metrics.
+              taught me to design for failure first: idempotency, retries, reconciliation and good metrics. Lately that
+              includes LLM features: wiring the OpenAI API into backend workflows so people can ask questions about
+              their own documents in plain language.
             </p>
             <p>
               I started as a mentored junior and now mentor others through code reviews and pairing. I care about
